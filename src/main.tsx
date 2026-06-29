@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './App.tsx';
 import { AuthProvider } from './store/AuthContext';
 import './styles/reset.css';
@@ -10,9 +10,9 @@ import './styles/global.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   </React.StrictMode>,
 );
