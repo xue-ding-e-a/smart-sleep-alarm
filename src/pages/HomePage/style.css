@@ -702,8 +702,8 @@
   transition: opacity var(--duration-normal) var(--ease-out);
 }
 
-/* 小屏手机适配 (< 375px) */
-@media (max-width: 374px) {
+/* 手机端适配 (最大宽度 480px) */
+@media (max-width: 480px) {
   .home-page {
     gap: var(--spacing-md);
   }
@@ -713,16 +713,16 @@
   }
 
   .home-alarm-time {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .home-sleep-target-value,
   .home-sleep-target-value .header-value-num {
-    font-size: 38px;
+    font-size: 42px;
   }
 
   .home-sleep-target-value .header-value-unit {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .home-time-picker-row {
@@ -747,14 +747,14 @@
   }
 
   .home-stepper-btn {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     font-size: 18px;
   }
 
   .home-stepper-number,
   .home-stepper-input {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .home-start-button {
@@ -764,23 +764,24 @@
   }
 
   .sleep-overview-icon {
-    width: 44px;
-    height: 44px;
-    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
   }
 }
 
-/* 中屏手机 (375px - 414px) */
-@media (min-width: 375px) and (max-width: 414px) {
+/* 大屏手机和桌面端 (> 480px) */
+@media (min-width: 481px) {
   .home-time-picker-row {
     grid-template-columns: 1fr 1fr;
   }
-}
 
-/* 大屏手机适配 (> 430px) */
-@media (min-width: 430px) {
   .home-duration-options {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .home-custom-duration-stepper {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
