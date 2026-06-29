@@ -1,0 +1,107 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-layout::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(ellipse at top right, var(--bg-decoration-1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, var(--bg-decoration-2) 0%, transparent 50%);
+  animation: bgFloat 20s ease-in-out infinite;
+}
+
+@keyframes bgFloat {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.status-bar-placeholder {
+  height: var(--status-bar-height);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  flex: 1;
+  overflow: hidden;
+  padding-bottom: calc(var(--tab-bar-height) + var(--bottom-safe-area));
+  position: relative;
+  z-index: 1;
+}
+
+.page-content {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--page-padding);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+  box-sizing: border-box;
+}
+
+.page-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.page-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.page-content::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 2px;
+}
+
+.page-content::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* 小屏适配 */
+@media (max-width: 374px) {
+  .page-content {
+    padding: 12px;
+  }
+}
+
+/* 大屏适配 */
+@media (min-width: 500px) {
+  .page-content {
+    padding: 24px;
+  }
+}
+
+.page-enter {
+  animation: pageEnter 0.35s var(--ease-out);
+  will-change: opacity, transform;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

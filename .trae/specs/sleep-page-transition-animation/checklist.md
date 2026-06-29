@@ -1,0 +1,10 @@
+- [x] Checkpoint 1: 切换按钮区域位于页面顶部（view-switcher 下方），滑动页面时保持固定位置
+- [x] Checkpoint 2: 睡眠总时长子页面显示详细纵向睡眠分布图，不显示横条图
+- [x] Checkpoint 3: 切换到其他子页面时，详细分布图平滑压缩为横条图（约 300-400ms）
+- [x] Checkpoint 4: 其他子页面在横条图下方显示对应信息图（心率曲线等）
+- [x] Checkpoint 5: 切换回睡眠总时长时，横条图平滑展开为详细分布图
+- [x] Checkpoint 6: 横条图在压缩状态下显示完整，无截断
+- [x] Checkpoint 7: 信息图在横条图下方正确显示，间距合理
+- [x] Checkpoint 8: 夜间主题下所有元素颜色正确适配
+- [x] Checkpoint 9: TypeScript 编译通过（npx tsc --noEmit）
+- [x] Checkpoint 10: 页面加载正常，切换子页面功能正常，无 JavaScript 错误
