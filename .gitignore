@@ -20,3 +20,9 @@ npm-debug.log*
 # Cache
 .cache/
 *.tsbuildinfo
+
+# TRAE IDE
+.trae/
+
+# Screenshots / debug images
+*.png

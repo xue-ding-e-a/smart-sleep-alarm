@@ -76,20 +76,6 @@
   background: var(--scrollbar-thumb-hover);
 }
 
-/* 小屏适配 */
-@media (max-width: 374px) {
-  .page-content {
-    padding: 12px;
-  }
-}
-
-/* 大屏适配 */
-@media (min-width: 500px) {
-  .page-content {
-    padding: 24px;
-  }
-}
-
 .page-enter {
   animation: pageEnter 0.35s var(--ease-out);
   will-change: opacity, transform;

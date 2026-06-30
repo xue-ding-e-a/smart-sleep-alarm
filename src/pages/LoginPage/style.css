@@ -9,13 +9,13 @@
 
 .auth-card {
   width: 100%;
-  max-width: 420px;
+  max-width: 380px;
   background: var(--card-bg);
   backdrop-filter: blur(var(--card-blur));
   -webkit-backdrop-filter: blur(var(--card-blur));
   border: 1px solid var(--card-border);
   border-radius: var(--radius-xl);
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-xl);
   box-shadow: var(--shadow-lg);
   animation: fadeInUp 0.5s ease-out;
 }
@@ -33,18 +33,18 @@
 
 .auth-header {
   text-align: center;
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .auth-logo {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto var(--spacing-lg);
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-md);
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(165, 180, 252, 0.15) 0%, rgba(129, 140, 248, 0.15) 50%, rgba(91, 92, 255, 0.15) 100%);
-  border-radius: 20px;
+  border-radius: 16px;
   border: 1px solid rgba(129, 140, 248, 0.2);
   box-shadow: 
     0 4px 20px rgba(91, 92, 255, 0.1),
@@ -56,7 +56,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 1px;
   background: linear-gradient(135deg, rgba(165, 180, 252, 0.5), rgba(91, 92, 255, 0.3));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -65,12 +65,12 @@
 }
 
 .auth-logo svg {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
 }
 
 .auth-title {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
   color: #1A1A1A;
   margin-bottom: var(--spacing-sm);

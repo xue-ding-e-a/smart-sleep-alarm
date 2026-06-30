@@ -6,13 +6,17 @@
 /* 小屏手机适配 */
 @media (max-width: 374px) {
   .sleep-chart-section {
-    margin: 0 8px 12px;
-    height: 320px;
+    margin: 0 0 12px;
+    height: 234px;
   }
 
   .sleep-stage-card {
     padding: 12px 12px 10px;
     border-radius: var(--radius-md);
+  }
+
+  .sleep-stage-card:has(.mini-stage-bar-wrapper:not(.hidden)) {
+    padding: 6px 12px;
   }
 
   .stage-chart-area {
@@ -21,11 +25,26 @@
   }
 
   .mini-stage-bar-wrapper {
-    height: 60px;
+    height: 42px;
   }
 
   .mini-stage-bar {
-    height: 44px;
+    height: 30px;
+  }
+
+  .curve-chart-card {
+    padding: 6px 12px;
+  }
+
+  .curve-chart-card.hidden {
+    padding: 0 12px;
+    height: 0;
+    min-height: 0;
+  }
+
+  .curve-y-labels {
+    padding: 2px 0 12px;
+    width: 32px;
   }
 
   .stage-y-labels {
@@ -54,7 +73,7 @@
   }
 
   .sleep-main-header {
-    padding: 8px 12px 16px;
+    padding: 8px 0 16px;
   }
 
   .header-value-num {
@@ -70,7 +89,7 @@
   }
 
   .metrics-scroll-container {
-    padding: 0 8px;
+    padding: 0;
   }
 
   .metric-scroll-card {
@@ -83,7 +102,7 @@
   }
 
   .sleep-score-card {
-    margin: 0 8px 16px;
+    margin: 0 0 16px;
     padding: 18px;
   }
 
@@ -96,7 +115,7 @@
   }
 
   .segment-card {
-    margin: 0 8px 0;
+    margin: 0 0 0;
     padding: 16px;
   }
 
@@ -110,7 +129,7 @@
   }
 
   .stats-grid {
-    padding: 0 8px;
+    padding: 0;
     gap: 8px;
   }
 
@@ -123,7 +142,7 @@
   }
 
   .week-chart-card {
-    margin: 0 8px 16px;
+    margin: 0 0 16px;
     padding: 16px 12px;
   }
 
@@ -137,7 +156,7 @@
   }
 
   .month-chart-card {
-    margin: 0 8px 16px;
+    margin: 0 0 16px;
     padding: 16px 12px;
   }
 
@@ -151,7 +170,7 @@
   }
 
   .nap-note {
-    padding: 0 8px;
+    padding: 0;
   }
 }
 
@@ -188,7 +207,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 8px 20px 24px;
+  padding: 8px 0 24px;
 }
 
 .header-left {
@@ -252,8 +271,8 @@
 .sleep-chart-section {
   display: flex;
   flex-direction: column;
-  height: 380px;
-  margin: 0 16px 16px;
+  height: 312px;
+  margin: 0 0 16px;
   gap: 12px;
   overflow: hidden;
 }
@@ -270,7 +289,7 @@
 }
 
 .sleep-stage-card:has(.mini-stage-bar-wrapper:not(.hidden)) {
-  padding: 12px 16px;
+  padding: 6px 16px;
 }
 
 .stage-chart-area {
@@ -291,7 +310,7 @@
 .mini-stage-bar-wrapper {
   display: block;
   transition: opacity 0.35s ease-out, height 0.35s ease-out;
-  height: 80px;
+  height: 56px;
 }
 
 .mini-stage-bar-wrapper.hidden {
@@ -446,7 +465,7 @@
 .curve-chart-card {
   background: var(--card-bg);
   border-radius: 16px;
-  padding: 16px;
+  padding: 4px 16px;
   border: 1px solid var(--card-border);
   transition: all 0.35s ease-out;
   flex: 1;
@@ -463,6 +482,8 @@
   opacity: 0;
   transform: translateY(20px);
   flex: 0;
+  height: 0;
+  min-height: 0;
   padding: 0 16px;
   border-width: 0;
   pointer-events: none;
@@ -479,7 +500,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 0 24px;
+  padding: 0 0 10px;
   flex-shrink: 0;
   width: 36px;
   text-align: right;
@@ -511,7 +532,7 @@
 }
 
 .metrics-scroll-container {
-  padding: 0 16px;
+  padding: 0;
   margin-bottom: 16px;
   cursor: default;
 }
@@ -570,7 +591,7 @@
 
 .sleep-score-card {
   background: var(--card-bg);
-  margin: 0 16px 20px;
+  margin: 0 0 20px;
   border-radius: 16px;
   padding: 24px;
   border: 1px solid var(--card-border);
@@ -637,7 +658,7 @@
   font-size: 17px;
   font-weight: 600;
   color: var(--text-primary);
-  padding: 8px 16px 12px;
+  padding: 8px 0 12px;
 }
 
 .section-icon {
@@ -646,7 +667,7 @@
 
 .segment-card {
   background: var(--card-bg);
-  margin: 0 16px 0;
+  margin: 0 0 0;
   border-radius: 16px;
   padding: 20px;
   border: 1px solid var(--card-border);
@@ -768,7 +789,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  padding: 0 16px;
+  padding: 0;
   margin-bottom: 24px;
 }
 
@@ -872,7 +893,7 @@
   color: var(--text-secondary);
   line-height: 1.5;
   margin: 0;
-  padding: 0 16px;
+  padding: 0;
 }
 
 .page-bottom-space {
@@ -881,7 +902,7 @@
 
 .week-chart-card {
   background: var(--card-bg);
-  margin: 0 16px 24px;
+  margin: 0 0 24px;
   border-radius: 16px;
   padding: 20px 16px;
   border: 1px solid var(--card-border);
@@ -932,7 +953,7 @@
 
 .month-chart-card {
   background: var(--card-bg);
-  margin: 0 16px 24px;
+  margin: 0 0 24px;
   border-radius: 16px;
   padding: 20px 16px 16px;
   border: 1px solid var(--card-border);

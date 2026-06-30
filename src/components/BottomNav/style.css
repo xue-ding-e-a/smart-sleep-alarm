@@ -106,6 +106,10 @@
 
 /* 小屏手机适配 */
 @media (max-width: 374px) {
+  :root {
+    --tab-bar-height: 56px;
+  }
+
   .bottom-nav-content {
     padding: 0 var(--spacing-xs);
   }
@@ -117,7 +121,7 @@
   .bottom-nav-indicator {
     width: 16px;
     height: 2px;
-    top: 8px;
+    top: 6px;
   }
 
   .bottom-nav-item {

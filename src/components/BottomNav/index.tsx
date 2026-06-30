@@ -36,7 +36,7 @@ const BottomNav: React.FC = () => {
             onClick={() => handleTabClick(tab.path)}
           >
             <div className="bottom-nav-icon">
-              <Icon name={tab.icon} size={24} active={isActive(tab.path)} />
+              <Icon name={tab.icon} size={20} active={isActive(tab.path)} />
             </div>
             <span className="bottom-nav-label">{tab.label}</span>
             {isActive(tab.path) && <div className="bottom-nav-indicator" />}

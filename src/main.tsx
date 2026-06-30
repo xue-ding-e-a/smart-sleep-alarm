@@ -3,9 +3,13 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import App from './App.tsx';
 import { AuthProvider } from './store/AuthContext';
+import { isWeChatBrowser } from './utils/browserDetect';
 import './styles/reset.css';
 import './styles/theme.css';
 import './styles/global.css';
+
+const rootClass = isWeChatBrowser() ? 'is-wechat' : 'not-wechat';
+document.documentElement.classList.add(rootClass);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
